@@ -1,0 +1,32 @@
+[project]
+name = "django-pakua"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Carlos Adolfo", email = "adolfo.ggc@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "django>=6.1.1",
+    "djangorestframework>=3.18.1",
+]
+
+[project.scripts]
+django-pakua = "django_pakua:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "bandit>=1.9.4",
+    "coverage>=7.16.2",
+    "django-stubs>=6.1.1",
+    "drf-spectacular>=0.30.0",
+    "mypy>=2.4.0",
+    "pytest>=9.1.1",
+    "pytest-django>=4.14.0",
+    "ruff>=0.16.10",
+]
